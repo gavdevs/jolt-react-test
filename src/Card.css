@@ -36,3 +36,35 @@
 .card p span{
 	margin: 0 10px;
 }
+
+ul.pagination {
+	list-style-type: none;
+	padding: 0;
+	margin-top: 12px;
+	overflow: hidden;
+	background-color: #333;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+
+ul.pagination li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 16px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+ul.pagination li a:hover,
+ul.pagination li a:active {
+	outline: 0;
+	border: 0;
+	background-color: #000;
+}
+
+ul.pagination li.active a {
+	background-color: #111;
+}

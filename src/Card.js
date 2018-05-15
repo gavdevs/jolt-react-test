@@ -33,8 +33,8 @@ class Card extends Component {
             nextLabel={"next"}
             breakClassName={"break"}
             pageCount={context.pages}
-            marginPagesDisplayed={context.pages}
-            pageRangeDisplayed={context.pages}
+            marginPagesDisplayed={2}
+            pageRangeDisplayed={2}
             onPageChange={context.pageChange}
             containerClassName={"pagination"}
             subContainerClassName={"pages pagination"}
