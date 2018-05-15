@@ -40,9 +40,7 @@
 ul.pagination {
 	list-style-type: none;
 	padding: 0;
-	margin-top: 12px;
-	overflow: hidden;
-	background-color: #333;
+	margin-top: 40px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -50,7 +48,7 @@ ul.pagination {
 }
 
 ul.pagination li a {
-	display: block;
+	background-color: #333;
 	color: white;
 	text-align: center;
 	padding: 16px;
