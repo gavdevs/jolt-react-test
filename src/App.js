@@ -8,7 +8,6 @@ import SearchBar from "./SearchBar.js"
 import star from './images/star.svg';
 import wars from './images/wars.svg';
 import { Context } from './context'
-import ReactPaginate from 'react-paginate'
 
 class App extends Component {
 
@@ -34,20 +33,6 @@ class App extends Component {
               <div>
                 <SearchBar context={context} />
                 <Card planets={this.state.planets} context={context} />
-
-                <div>
-                <ReactPaginate
-                  previousLabel={"previous"}
-                  nextLabel={"next"}
-                  breakClassName={"break"}
-                  pageCount={context.pages}
-                  marginPagesDisplayed={context.pages}
-                  pageRangeDisplayed={context.pages}
-                  onPageChange={context.pageChange}
-                  containerClassName={"pagination"}
-                  subContainerClassName={"pages pagination"}
-                  activeClassName={"active"} />
-                </div>
               </div>
             )
           }}
