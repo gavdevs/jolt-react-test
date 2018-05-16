@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import './Card.css';
+import React, { Component } from 'react'
+import './Card.css'
 import ReactPaginate from 'react-paginate'
 
 class Card extends Component {
   render() {
-    const { planets, context } = this.props
+    const { context } = this.props
 
     if (context.people.length > 0) {
       return (
@@ -21,7 +21,7 @@ class Card extends Component {
                   </p>
                   <p>
                     <span>Homeworld:</span>
-                    <span>{this.getPlanet(person.id, planets)}</span>
+                    <span>{this.getPlanet(person.homeworld, context.planets)}</span>
                     </p>
                 </div>
               </div>
@@ -36,7 +36,7 @@ class Card extends Component {
             marginPagesDisplayed={2}
             pageRangeDisplayed={2}
             onPageChange={context.pageChange}
-            containerClassName={"pagination"}
+            containerClassName={"pagination"}w
             subContainerClassName={"pages pagination"}
             activeClassName={"active"} />
         </div>          
@@ -46,9 +46,9 @@ class Card extends Component {
     return <h1>Loading...</h1>
   }
 
-  getPlanet(personId, planets) {
+  getPlanet(planetId, planets) {
     return planets.map(planet => {
-      return planet.residents.includes(personId) ? planet.name : ''
+      return planet.id === planetId ? planet.name : ''
     })
   }
 }

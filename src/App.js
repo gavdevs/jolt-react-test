@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-// installed axios for fetching data
-import axios from 'axios';
-
 import './App.css';
 import Card from './Card.js';
 import SearchBar from "./SearchBar.js"
@@ -10,13 +7,6 @@ import wars from './images/wars.svg';
 import { Context } from './context'
 
 class App extends Component {
-
-  constructor(props) {
-    super(props)
-
-    this.state = { planets: [] }
-  }
-
   render() {
     return (
       <div className='content'>
@@ -32,20 +22,13 @@ class App extends Component {
             return (
               <div>
                 <SearchBar context={context} />
-                <Card planets={this.state.planets} context={context} />
+                <Card context={context} />
               </div>
             )
           }}
         </Context.Consumer>
       </div>
-    );
-  }
-
-  componentDidMount() {
-    axios('http://localhost:3008/planets')
-        .then((res) => {
-          this.setState ({ planets: res.data })
-        })
+    )
   }
 }
 

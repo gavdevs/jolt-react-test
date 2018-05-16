@@ -7,3 +7,4 @@ Put any notes for us here.
 
 3. I skipped being able to search by planet as I was not in able to come up with a clever way to do this in the timeframe I had :P
 
+4. Well for my last 20 minutes I refactored a little bit how I was doing planets, and then tried doing something funky with the planets data and ended up creating about 200 more posts in /people that only contain a home world. So that was fun, I do not have enough time now to reverse what I did so I'll leave it as is :P

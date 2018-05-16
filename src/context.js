@@ -12,6 +12,7 @@ export class Provider extends React.Component {
       pages: 0,
       query: '',
       people: [],
+      planets: [],
       pageChange: (data) => {
         this.setState({ currentPage: data.selected + 1 }, this.getPeople)
       },
@@ -32,12 +33,20 @@ export class Provider extends React.Component {
   componentDidMount() {
     this.getPeople()
     this.getPageAmount()
+    this.getPlanets()
   } 
 
   getPeople() {
     axios.get(`http://localhost:3008/people?_page=${this.state.currentPage}`)
       .then((res) => {
         this.setState ({ people: res.data })
+      })
+  }
+
+  getPlanets() {
+    axios.get(`http://localhost:3008/planets`)
+      .then((res) => {
+        this.setState ({ planets: res.data })
       })
   }
 
